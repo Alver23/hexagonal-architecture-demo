@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Alver23/hexagonal-architecture-demo/issues"
   },
-  "homepage": "https://github.com/Alver23/hexagonal-architecture-demo#readme"
+  "homepage": "https://github.com/Alver23/hexagonal-architecture-demo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
