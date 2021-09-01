@@ -7,10 +7,6 @@
         "lib": ["ES5"],
         "module": "commonjs",
         "moduleResolution": "node",
-        "paths": {
-            "@backend/*": ["./backend"],
-            "@frontend/*": ["./frontend"]
-        },
         "resolveJsonModule": true,
         "sourceMap": true,
         "target": "es5",

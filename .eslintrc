@@ -27,12 +27,16 @@
   ],
   "settings": {
     "import/resolver": {
-      "typescript": {}
-    },
+      "typescript": {
+        "project": "src/backend/tsconfig.json"
+      }
+    }
   },
   "rules": {
     "prettier/prettier": "error",
     "no-useless-constructor": 0,
-    "import/extensions": ["error", "ignorePackages", { "ts": "never" }]
+    "import/extensions": ["error", "ignorePackages", { "ts": "never" }],
+    "@typescript-eslint/no-namespace": "off",
+    "class-methods-use-this": 0
   }
 }
