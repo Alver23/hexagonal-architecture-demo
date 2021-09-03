@@ -11,18 +11,21 @@ import ResponseToJson from '@backend/core/middlewares/response-json';
 import ErrorHandler from '@backend/core/middlewares/error-handler';
 import WrapperError from '@backend/core/middlewares/wrapper-error';
 
-// Interfaces
+// Routes
 import { IBootstrap } from '@backend/bootstrap/interfaces';
+import ApiRoutes from './routes';
+
+// Interfaces
 
 // Template server
 import ServerTemplate from '../server-template';
 
 class ApiServer extends ServerTemplate implements IBootstrap {
-  protected server: Application;
+  private readonly apiRoutes: ApiRoutes;
 
-  constructor(server: Application) {
+  constructor(protected readonly server: Application) {
     super();
-    this.server = server;
+    this.apiRoutes = new ApiRoutes(this.server);
   }
 
   protected errorHandlers(): void {
@@ -48,9 +51,7 @@ class ApiServer extends ServerTemplate implements IBootstrap {
   }
 
   protected setRoutes(): void {
-    this.server.get('/', (req, res) => {
-      res.json({ server: 'API' });
-    });
+    this.apiRoutes.publicRoutes();
   }
 }
 
