@@ -1,6 +1,0 @@
-{
-  "extends": "./src/backend/tsconfig.json",
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true
-  }
-}

@@ -20,7 +20,7 @@ export default {
   collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: ['<rootDir>/src/backend/**/*.ts'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
@@ -46,7 +46,7 @@ export default {
 
   // A path to a custom dependency extractor
   // dependencyExtractor: undefined,
-  displayName: 'server',
+  displayName: 'api-server',
 
   // Make calling deprecated APIs throw helpful error messages
   // errorOnDeprecated: false,
@@ -63,7 +63,7 @@ export default {
   // A set of global variables that need to be available in all test environments
   globals: {
     'ts-jest': {
-      tsconfig: './src/backend/tsconfig.spec.json',
+      tsconfig: './tsconfig.spec.json',
     },
   },
 
@@ -87,7 +87,7 @@ export default {
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
-    '@backend/(.*)': '<rootDir>/src/backend/src/$1',
+    '@backend/(.*)': '<rootDir>/src/$1',
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
@@ -132,7 +132,7 @@ export default {
   // rootDir: undefined,
 
   // A list of paths to directories that Jest should use to search for files in
-  roots: ['<rootDir>/src/backend'],
+  roots: ['<rootDir>/src'],
 
   // Allows you to use a custom runner instead of Jest's default test runner
   // runner: "jest-runner",

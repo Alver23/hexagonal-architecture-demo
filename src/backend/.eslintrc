@@ -29,7 +29,7 @@
   "settings": {
     "import/resolver": {
       "typescript": {
-        "project": "src/backend/tsconfig.json"
+        "project": "./tsconfig.json"
       }
     }
   },

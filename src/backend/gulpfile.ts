@@ -10,7 +10,7 @@ dotenv.config();
 const CONFIG = {
   env: process.env.NODE_ENV,
   serverConfig: {
-    basePath: './src/backend',
+    basePath: '.',
     watchPath: ['src'],
     tsconfig: 'tsconfig.json',
     outputDir: 'build',
