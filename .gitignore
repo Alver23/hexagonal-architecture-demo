@@ -48,6 +48,7 @@ build/Release
 **/husky.sh
 
 # Dependency directories
+**/node_modules
 src/backend/node_modules/
 jspm_packages/
 
