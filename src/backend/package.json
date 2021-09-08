@@ -8,7 +8,6 @@
     "lint:fix": "npm run lint -- --fix",
     "lint:report": "eslint --ext ts src/ -f html -o reports/lint.html",
     "prettier": "prettier --config .prettierrc --ignore-path ./.prettierignore --write src/**/*.ts",
-    "prepare": "cd ../../ && husky install src/backend/.husky",
     "test": "jest --logHeapUsage",
     "test:watch": "npm test -- --verbose --watch",
     "server:build": "gulp server:build",
