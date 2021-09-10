@@ -6,7 +6,7 @@ import AppRouter from './routes';
 
 const App = (): ReactElement => {
   return (
-    <div className="min-h-screen">
+    <div className="bg-gray-50 text-gray-600 body-font min-h-screen">
       <AppRouter />
     </div>
   );

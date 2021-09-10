@@ -1,5 +1,5 @@
 // Commons
-import { STATUS_TYPES } from '../../../commons/app';
+import { STATUS_TYPES } from '@ecommerce/commons/app';
 
 export enum CONSTANTS {
   SET_LOADING = 'SET_LOADING',

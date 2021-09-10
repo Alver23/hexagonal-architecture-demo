@@ -1,7 +1,7 @@
 import { ProductListCommand, productRepository } from "shared-modules";
 
 // Hooks
-import { useFetch } from '../../../../../../../hooks/use-fetch';
+import { useFetch } from '@ecommerce/hooks/use-fetch';
 
 
 const productListCommand =  new ProductListCommand(productRepository);

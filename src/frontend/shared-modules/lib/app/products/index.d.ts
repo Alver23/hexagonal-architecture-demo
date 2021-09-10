@@ -2,3 +2,4 @@ export { productRepository } from "./infrastructure/repositories/HttpProductRepo
 export { ProductEntity } from "./domain/entities/product";
 export { ProductRepository } from "./domain/respositories/product";
 export { ProductListCommand } from "./application/product-list";
+export { ProductDetailCommand } from "./application/product-detail";

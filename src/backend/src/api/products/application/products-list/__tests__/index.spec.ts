@@ -6,6 +6,7 @@ describe('ProductsListCommand', () => {
   const mockData = [{ id: 1 }];
   const productRepository: ProductRepository = {
     getProducts: jest.fn().mockResolvedValue(mockData),
+    getProduct: jest.fn().mockResolvedValue(mockData[0]),
   };
 
   let productListCommand: ProductsListCommand;

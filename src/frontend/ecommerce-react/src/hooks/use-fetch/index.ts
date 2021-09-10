@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Commons
-import { STATUS_TYPES } from '../../commons/app';
+import { STATUS_TYPES } from '@ecommerce/commons/app';
 
 // Reducers
 import { fetchReducer, initialState, CONSTANTS, IState } from './reducer';

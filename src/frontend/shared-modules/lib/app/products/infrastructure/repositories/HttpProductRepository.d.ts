@@ -6,5 +6,6 @@ export declare class HttpProductRepository implements ProductRepository {
     private readonly baseUrl;
     constructor(httpClient: Connector);
     getProducts(): Promise<ProductEntity[]>;
+    getProduct(id: string): Promise<ProductEntity>;
 }
 export declare const productRepository: HttpProductRepository;

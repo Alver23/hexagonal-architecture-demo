@@ -11,7 +11,7 @@ export default class ProductListController {
   constructor(private readonly productListCommand) {}
 
   async execute(req: Request, res: ICustomResponse): Promise<any> {
-    const response = await this.productListCommand.execute(req.body);
+    const response = await this.productListCommand.execute();
     res.responseJson({ message: HttpMessages.LISTS, data: response });
   }
 }
