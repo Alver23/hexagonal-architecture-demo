@@ -62,7 +62,7 @@ var HttpProductRepository = /** @class */ (function () {
                             })
                                 .then(resolve)
                                 .catch(reject);
-                        }, 3000);
+                        }, 1500);
                     })];
             });
         });
@@ -86,7 +86,7 @@ var HttpProductRepository = /** @class */ (function () {
                                     .catch(reject);
                                 return [2 /*return*/];
                             });
-                        }); }, 3000);
+                        }); }, 1500);
                     })];
             });
         });

@@ -4,7 +4,7 @@ import { ReactElement } from 'react';
 // Containers
 import { ProductList } from "@ecommerce/app/products/infrastructure/ui/containers/product-list";
 
-export const ProductPage = (): ReactElement => {
+export const ProductListPage = (): ReactElement => {
 
   return (
     <div className="container w-full m-auto p-4">

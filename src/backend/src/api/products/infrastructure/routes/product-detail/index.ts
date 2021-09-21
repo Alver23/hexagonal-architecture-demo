@@ -8,7 +8,7 @@ import ProductDetailController from "@backend/api/products/infrastructure/contro
 import ProductsDetailCommand from "@backend/api/products/application/product-detail";
 
 // Repositories
-import MongoProductRepository from '@backend/api/products/infrastructure/repositories/mongo-product';
+// import MongoProductRepository from '@backend/api/products/infrastructure/repositories/mongo-product';
 import HttpProductRepository from '@backend/api/products/infrastructure/repositories/http-product';
 
 // Schema
@@ -18,8 +18,8 @@ import ProductSchema from '@backend/api/products/infrastructure/schema';
 import AsyncError from '@backend/core/middlewares/async-error';
 import ICustomResponse from '@backend/core/middlewares/response-json/interfaces';
 
-const productRepository = new MongoProductRepository(ProductSchema);
-// const productRepository = new HttpProductRepository();
+// const productRepository = new MongoProductRepository(ProductSchema);
+const productRepository = new HttpProductRepository();
 const productListCommand = new ProductsDetailCommand(productRepository);
 const productController = new ProductDetailController(productListCommand);
 

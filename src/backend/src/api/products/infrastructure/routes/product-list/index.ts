@@ -2,13 +2,13 @@
 import { Router, Request, Application } from 'express';
 
 // Controllers
-import ProductListController from '@backend/api/products/infrastructure/controllers/products';
+import ProductListController from '@backend/api/products/infrastructure/controllers/product-list';
 
 // Commands
 import ProductsListCommand from '@backend/api/products/application/products-list';
 
 // Repositories
-import MongoProductRepository from '@backend/api/products/infrastructure/repositories/mongo-product';
+// import MongoProductRepository from '@backend/api/products/infrastructure/repositories/mongo-product';
 import HttpProductRepository from '@backend/api/products/infrastructure/repositories/http-product';
 
 // Schema
@@ -18,8 +18,8 @@ import ProductSchema from '@backend/api/products/infrastructure/schema';
 import AsyncError from '@backend/core/middlewares/async-error';
 import ICustomResponse from '@backend/core/middlewares/response-json/interfaces';
 
-const productRepository = new MongoProductRepository(ProductSchema);
-// const productRepository = new HttpProductRepository();
+// const productRepository = new MongoProductRepository(ProductSchema);
+const productRepository = new HttpProductRepository();
 const productListCommand = new ProductsListCommand(productRepository);
 const productController = new ProductListController(productListCommand);
 

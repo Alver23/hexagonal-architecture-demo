@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 // Router
-import AppRouter from './routes';
+import AppRouter from './router';
 
 const App = (): ReactElement => {
   return (

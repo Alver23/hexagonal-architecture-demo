@@ -3,8 +3,8 @@ import { ReactElement } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Pages
-import { ProductPage } from "../app/products/infrastructure/ui/pages/products";
-import { ProductDetailPage} from "../app/products/infrastructure/ui/pages/product-detail";
+import { ProductListPage } from "@ecommerce/app/products/infrastructure/ui/pages/product-list";
+import { ProductDetailPage} from "@ecommerce/app/products/infrastructure/ui/pages/product-detail";
 
 const AppRouter = (): ReactElement => {
   return (
@@ -14,7 +14,7 @@ const AppRouter = (): ReactElement => {
           <ProductDetailPage />
         </Route>
         <Route path="/">
-          <ProductPage />
+          <ProductListPage />
         </Route>
       </Switch>
     </Router>

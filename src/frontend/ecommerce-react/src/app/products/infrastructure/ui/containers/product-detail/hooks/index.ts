@@ -1,13 +1,14 @@
-import { ProductDetailCommand, productRepository } from "shared-modules";
+import {ProductDetailCommand, ProductEntity, productRepository} from "shared-modules";
 
 // Hooks
 import { useFetch } from '@ecommerce/hooks/use-fetch';
+import { STATUS_TYPES } from "@ecommerce/commons/app";
 
 
 const productDetailCommand =  new ProductDetailCommand(productRepository);
 
-export const useGetProductDetail = (id: string) => {
-  const getList = () => {
+export const useGetProductDetail = (id: string): [STATUS_TYPES, ProductEntity] => {
+  const getProduct = () => {
     return productDetailCommand.execute(id);
   }
 
@@ -15,7 +16,7 @@ export const useGetProductDetail = (id: string) => {
     data: {},
   };
 
-  const [state] = useFetch(getList, [], initialState);
+  const [state] = useFetch(getProduct, [], initialState);
   const { status, data } = state;
 
   return [status, data]

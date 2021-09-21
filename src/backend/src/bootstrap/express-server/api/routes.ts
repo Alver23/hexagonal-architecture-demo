@@ -2,7 +2,7 @@
 import { Application } from 'express';
 
 // Routes
-import productRoutes from '@backend/api/products/infrastructure/routes/products';
+import productRoutes from '@backend/api/products/infrastructure/routes/product-list';
 import productDetailRoutes from '@backend/api/products/infrastructure/routes/product-detail'
 
 export default class ApiRoutes {

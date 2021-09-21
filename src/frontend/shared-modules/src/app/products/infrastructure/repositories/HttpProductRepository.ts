@@ -21,7 +21,7 @@ export class HttpProductRepository implements ProductRepository {
           })
           .then(resolve)
           .catch(reject)
-      }, 3000);
+      }, 1500);
     })
   }
 
@@ -34,7 +34,7 @@ export class HttpProductRepository implements ProductRepository {
           .then((response) => new ProductMapper(response))
           .then(resolve)
           .catch(reject)
-      }, 3000)
+      }, 1500)
     })
   }
 }

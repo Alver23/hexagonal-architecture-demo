@@ -2,9 +2,6 @@
 import { Request } from 'express';
 import { OK } from 'http-status-codes';
 
-// Utils
-import { HttpMessages } from '@backend/utils/messages';
-
 // Interfaces
 import ICustomResponse from '@backend/core/middlewares/response-json/interfaces';
 

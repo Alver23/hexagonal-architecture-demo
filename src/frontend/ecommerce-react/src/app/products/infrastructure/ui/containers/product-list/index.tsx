@@ -28,7 +28,7 @@ export const ProductList = (): ReactElement => {
         )
       }
       {
-        productList.map((product: any) => {
+        productList.map((product) => {
           return (
             <div className="xl:w-1/3 md:w-1/2 p-4" key={product.id}>
               <Product picture={product.picture} name={product.name} price={product.price}>
